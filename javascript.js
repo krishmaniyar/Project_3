@@ -29,6 +29,14 @@ document.getElementsByClassName("Scissor")[0].addEventListener("click", function
 });
 
 function evaluate(user) {
+    document.getElementById("demo").innerHTML ="";
+    if(wins+losses+ties>=5)
+    {
+        wins=0;
+        losses=0;
+        ties=0;
+        document.getElementById("demo").innerHTML ="Starting new game.";
+    }
     if (user == "Rock") {
         if (computer == "Rock") {
             ties++;
