@@ -7,35 +7,45 @@
     </head>
     <body>
         <div class = "header">
-            <h1 style="height: 100px; align-content: center;justify-content: center; text-align: center;margin: 0%; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ROCK PAPER SCISSORS</h1>
+            <h1 style="height: 100px; align-content: center;justify-content: center; text-align: center;margin: 0%;">ROCK PAPER SCISSORS</h1>
         </div>
+        <!-- <div class="main">
+            <p id="output">
+            </p>
+        </div> -->
+        <form action="#">
         <div class="middle">
-            <div class="rock" style="align-content: center; padding: 30px;">
-                <button type="button" class="Rock">
-                    <img src="images/rock-emoji.png">
+                <div class="rock" style="align-content: center; padding: 30px;">
+                    <img src="images/rock.png">
                     <br>
-                    Rock
-                </button>
-            </div>
-            <div class="paper" style="padding: 30px;">
-                <button type="button" class="Paper">
-                    <img src="images/paper-emoji.png">
+                    <div>
+                        <input type="radio" id="input1" name="option" value="Rock">
+                        <label for="Rock">Rock</label>
+                    </div>
+                </div>
+                <div class="paper" style="padding: 30px;">
+                    <img src="images/paper.png">
                     <br>
-                    Paper
-                </button>
-            </div>
-            <div class="scissors"style="padding: 30px;">
-                <button type="button" class="Scissor">
-                    <img src="images/scissors-emoji.png">
+                    <div>
+                        <input type="radio" id="input2" name="option" value="Paper">
+                        <label for="Paper">Paper</label>
+                    </div>
+                </div>
+                <div class="scissors"style="padding: 30px;">
+                    <img src="images/scissors.png">
                     <br>
-                    Scissors
-                </button>
+                    <div>
+                        <input type="radio" id="input3" name="option" value="Scissor">
+                        <label for="Scissor">Scissor</label>
+                    </div>
+                </div>
             </div>
-        </div>
+        </form>
         <div class="result">
-            <p id="demo" style="color: aliceblue;"></p>
-            <p id="demo1" style="color: aliceblue;"></p>
-            <p id="demo2" style="color: aliceblue;"></p>
+            <button type="submit" onclick="inp()" name="option">Submit</button>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
         </div>
         <div class="footer" style="position: fixed; bottom: 0; width: 100%;">
             Copyright © Krish Maniyar

@@ -14,19 +14,29 @@ function GFG_Fun() {
 
 let computer = GFG_Fun();
 
-var rock = document.getElementsByClassName("Rock")[0];
-var paper = document.getElementsByClassName("Paper")[0];
-var scissor = document.getElementsByClassName("Scissor")[0];
-
-document.getElementsByClassName("Rock")[0].addEventListener("click", function () {
-    evaluate("Rock");
-});
-document.getElementsByClassName("Paper")[0].addEventListener("click", function () {
-    evaluate("Paper");
-});
-document.getElementsByClassName("Scissor")[0].addEventListener("click", function () {
-    evaluate("Scissor");
-});
+function inp()
+{
+    var x;
+    var rock = document.getElementById('input1');
+    if(rock.checked)
+    {
+        x = document.getElementById('input1').value;
+        rock.checked = false;
+    }
+    var paper = document.getElementById('input2');
+    if(paper.checked)
+    {
+        x = document.getElementById('input2').value;
+        paper.checked = false;
+    }
+    let scissor = document.getElementById('input3');
+    if(scissor.checked)
+    {
+        x = document.getElementById('input3').value;
+        scissor.checked = false;
+    }
+    evaluate(x);
+}
 
 function evaluate(user) {
     document.getElementById("demo").innerHTML ="";
@@ -73,6 +83,7 @@ function evaluate(user) {
     console.log(computer);
     console.log(user);
     console.log(wins + losses + ties)
+    // document.getElementById("output").innerHTML = "YOU  " + wins + ":" + losses +" Computer";
     document.getElementById("demo1").innerHTML ="Computer chooses " + computer;
     document.getElementById("demo2").innerHTML ="Wins: " + wins + " Losses: " + losses + " Ties: " + ties;
     computer = GFG_Fun();
